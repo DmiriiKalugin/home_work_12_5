@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var container =
+                document.querySelector('.popup-container');
+            var popupButtons =
+                document.querySelectorAll('.open-popup');
+            for (let i = 0; i < popupButtons.length; i++) {
+                popupButtons[i].addEventListener('click', function () {
+                    container.style.display = 'flex';
+                });
+            }
+
+
+            container.addEventListener('click', function (event) {
+                if (event.target == container) {
+                    container.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <title>Учебная страница</title>
+</head>
+
+<body>
+    <div class="popup-container">
+        <form class="popup">
+            <h3>Заполните контактные данные:</h1>
+            <input type="text" name="name" placeholder="Введите ваше имя">
+            <input type="email" name="email" placeholder="Введите ваш Email">
+            <button type="button" class="btn-light open-popup">Отправить</button>
+        </form>
+    </div>
+
+    <header>
+        <div class="fixed-container">
+            <div class="menu-nav">
+                <a class="menu-link" href="#">Услуги</a>
+                <a class="menu-link" href="#">Портфолио</a>
+                <a class="menu-link" href="#">Цена</a>
+            </div>
+            <div class="contact">
+                <span class="phone">+7 (988) 888-88-88</span>
+                <button type="button" class="btn-light open-popup">Заказать звонок</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="first-block">
+        <div class="fixed-container">
+            <h1 class="first-block-title">Дмитрий Алексеев</h1>
+            <p class="first-block-sub-title">Frontend-разработчик и веб-верстальщик</p>
+            <button type="button" class="btn-blue  open-popup">Узнать больше</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="fixed-container">
+            <h2>Что я делаю</h2>
+            <div class="services">
+                <div>
+                    <img src="./img/bg-services-1.png" alt="services-1">
+                    Верстка лэндинг-страниц и сайтов любой сложнсти
+                </div>
+                <div>
+                    <img src="./img/bg-services-2.png" alt="services-2">
+                    Адаптивная верстка под браузеры и устройства
+                </div>
+                <div>
+                    <img src="./img/bg-services-3.png" alt="services-3">
+                    Frontend-разработка и программирование
+                </div>
+                <div>
+                    <img src="./img/bg-services-4.png" alt="services-4">
+                    Исправление и доработка существующей верстки
+                </div>
+            </div>
+            <button type="button" class="btn-light open-popup">Узнать стоимость</button>
+        </div>
+    </section>
+
+    <section class="example-work">
+        <div class="fixed-container">
+            <h2>Примеры работ</h2>
+            <div class="example-work-img-block">
+                <div>
+                    <img class="example-work-img" src="./img/bg-example-1.png" alt="example-1">
+                    <p>Сайт психолога Веры Антоновой</p>
+                </div>
+                <div>
+                    <img class="example-work-img" src="./img/bg-example-2.png" alt="example-2">
+                    <p>Сайт магазина детской одежды</p>
+                </div>
+                <div>
+                    <img class="example-work-img" src="./img/bg-example-3.png" alt="example-3">
+                    <p>Сайт магазина "Рыболов"</p>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn-light open-popup">Заказать проект</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="price-info">
+        <div class="fixed-container">
+            <div class="price-info-content">
+                <h2>Адаптивная верстка под все устройства и браузеры от 1000 ₽ всего за 4 часа.*</h2>
+                <p>* Сроки и стомость отличаться от заявленных и рассчитываются индивидуально, в зависимости от
+                    сложности задач.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="fixed-container">
+            <div class="menu-nav-footer">
+                <a class="menu-link" href="#">Услуги</a>
+                <a class="menu-link" href="#">Портфолио</a>
+                <a class="menu-link" href="#">Цена</a>
+            </div>
+
+            <div class="contact-footer">
+                <span class="email">mail@mai.ru</span>
+                <span class="phone">+7 (988) 888-88-88</span>
+            </div>
+
+            <div class="social-footer">
+                <button type="button" class="btn-light open-popup">Заказать звонок</button>
+                <div>
+                    <a href="#"><img class="social" src="./img/social/facebook.png" alt="facebook"></a>
+                    <a href="#"><img class="social" src="./img/social/vk.png" alt="vk"></a>
+                    <a href="#"><img class="social" src="./img/social/youtube.png" alt="youtube"></a>
+                    <a href="#"><img class="social" src="./img/social/telegram.png" alt="telegram"></a>
+                    <a href="#"><img class="social" src="./img/social/instagram.png" alt="instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
